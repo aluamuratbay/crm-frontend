@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="container header__container">
+      <img src="img/Logo.svg" alt="Skillbus Logo" class="header__logo">
+      <input type="text" class="header__input" id="search-input" placeholder="Введите запрос">
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container main__container">
+      <h1 class="main__title">Клиенты</h1>
+
+      <div class="main__table-wrap">
+        <table class="table main__table">
+          <thead class="thead">
+            <tr>
+              <th class="th th-id th-clicked">ID</th>
+              <th class="th th-fio">Фамилия Имя Отчество</th> 
+              <th class="th th-create">Дата и время создания</th>
+              <th class="th th-update">Последние изменения</th>
+              <th>Контакты</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+
+          <tbody class="tbody" id="tbody">
+          </tbody>
+        </table>
+
+        <div class="preloader" id="preloader">
+          <div class="preloader__loader">
+            <div class="loader__spinner">
+              <div class="spinner">
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>   
+      </div>
+
+      <button class="btn-add btn--secondary" id="btn-add">
+        <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+        </svg>          
+        Добавить клиента
+      </button>
+
+      <div class="modal-wrap" id="add-wrap">
+        <div class="modal-content">
+          <h2 class="add-title">Новый клиент</h2>
+          <form class="add-form" id="add-form">
+            <div class="add-wrap">
+              <input class="add-input" type="text" id="surname-input" placeholder="Фамилия*">
+            </div>
+            <div class="add-wrap">
+              <input class="add-input" type="text" id="name-input" placeholder="Имя*">
+            </div>
+            <div class="add-wrap">
+              <input class="add-input" type="text" id="lastname-input" placeholder="Отчество">
+            </div>
+            <div class="contact-new" id="contact-new">
+              <button type="button" class="btn btn-contact" id="btn-contact">Добавить контакт</button>
+            </div>
+            <button type="submit" class="btn-save btn--primary" id="btn-save">Сохранить</button>
+          </form>
+          <button class="btn btn--cancel" id="btn-cancel">Отмена</button>
+          <button class="btn btn-close" id="btn-close"></button>
+        </div>
+      </div>
+        
+    </div>
+  </main>
+
+  <script src="js/choices.min.js"></script>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
