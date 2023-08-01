@@ -521,12 +521,15 @@ function deleteClient(clientObj) {
   document.body.append($deleteWrap);
 
   $btnRemove.addEventListener('click', async (e) => {
+    e.preventDefault();
     showLoader();
     await serverDeleteClient(clientObj);
     $deleteWrap.classList.remove('delete-wrap--active');
 
     hideLoader();
+    console.log(clientsList);
     renderTable(clientsList);
+    location.reload(true);
   })
 
   $btnLeave.addEventListener('click', () => {
