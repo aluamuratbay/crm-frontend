@@ -521,7 +521,6 @@ function deleteClient(clientObj) {
   document.body.append($deleteWrap);
 
   $btnRemove.addEventListener('click', async (e) => {
-    e.preventDefault();
     showLoader();
     await serverDeleteClient(clientObj);
     $deleteWrap.classList.remove('delete-wrap--active');
