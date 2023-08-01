@@ -47,7 +47,6 @@ let serverData = await serverGetClients();
 
 if(serverData !== null) {
   clientsList = serverData;
-  console.log(clientsList);
 }
 
 sort(clientsList, 'id');
@@ -527,8 +526,6 @@ function deleteClient(clientObj) {
     $deleteWrap.classList.remove('delete-wrap--active');
 
     hideLoader();
-    console.log(clientsList);
-    renderTable(clientsList);
     location.reload(true);
   })
 
