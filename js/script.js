@@ -1,4 +1,4 @@
-const SERVER_URL = 'https://crm-backend-3vdv.onrender.com/users';
+const SERVER_URL = 'https://distinct-gray-shoe.cyclic.app/users';
 let clientsList = [];
 
 async function serverGetClients() {
