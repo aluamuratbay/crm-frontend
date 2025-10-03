@@ -277,7 +277,7 @@ input {
 }
 
 .th-fio::before {  
-  content: 'А-Я';
+  content: 'A-Z';
   position: absolute;
   left: 166px;
   font-weight: 600;
